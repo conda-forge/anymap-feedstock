@@ -25,6 +25,7 @@ requirements:
     - anywidget >=0.9.0
     - ipywidgets >=8.0.0
     - traitlets >=5.0.0
+    - numpy
 
 test:
   imports:
