@@ -1,5 +1,5 @@
 {% set name = "anymap" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/anymap-{{ version }}.tar.gz
-  sha256: c283a7c113c1556f611da92c62bb0d4cc6e0d2448dcffb7bf87b79aa615346c7
+  sha256: 913093a79ad4b854144dd5013ccf163b216a6b0a47840aba1111dfa0cf55faf4
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
@@ -23,9 +23,15 @@ requirements:
   run:
     - python  >={{ python_min }}
     - anywidget >=0.9.0
+    - geopandas
+    - ipyvuetify
     - ipywidgets >=8.0.0
-    - traitlets >=5.0.0
     - numpy
+    - pandas
+    - pystac-client
+    - requests
+    - traitlets >=5.0.0
+    - xyzservices
 
 test:
   imports:
