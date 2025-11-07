@@ -1,5 +1,5 @@
 {% set name = "anymap" %}
-{% set version = "0.7.0" %}
+{% set version = "0.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/anymap-{{ version }}.tar.gz
-  sha256: 991761ca61582072158464fa8f2261b4b1987ff4261fbf3acab5acbc003ef9d6
+  sha256: 248a896d0f3847ad71042a1d23471afc0266df82f9ce9bad9ad17b98ec4ba3b7
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
