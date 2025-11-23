@@ -1,5 +1,5 @@
 {% set name = "anymap" %}
-{% set version = "0.10.0" %}
+{% set version = "0.10.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/anymap-{{ version }}.tar.gz
-  sha256: d034ce3edc74253d671ad750778b8bfafa027d174950f5764d7884288eb17e8c
+  sha256: 0b42099ada306b5f579e163d7bf47df00975c7c24d63745a63e806c105d18a9d
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
@@ -24,6 +24,7 @@ requirements:
     - python >={{ python_min }}
     - duckdb >=1.4.1
     - anywidget >=0.9.0
+    - duckdb >=1.4.1
     - geopandas
     - ipyvuetify
     - ipywidgets >=8.0.0
