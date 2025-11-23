@@ -21,7 +21,8 @@ requirements:
     - setuptools-scm >=8
     - pip
   run:
-    - python  >={{ python_min }}
+    - python >={{ python_min }}
+    - duckdb >=1.4.1
     - anywidget >=0.9.0
     - geopandas
     - ipyvuetify
